@@ -4,8 +4,12 @@
   "description": "\u0016command line to encode or decode a base64",
   "main": "app.js",
   "type": "module",
+  "bin": {
+    "bdecode": "./src/bin.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "co": "bdecode"
   },
   "repository": {
     "type": "git",
@@ -18,10 +22,12 @@
   },
   "homepage": "https://github.com/JoaquinC77/bdecode#readme",
   "dependencies": {
-    "@clack/prompts": "0.6.3"
+    "@clack/prompts": "0.6.3",
+    "clipboardy": "3.0.0",
+    "bdecode": "file://dev/bdecode"
   },
   "devDependencies": {
-    "standard": "^17.0.0"
+    "standard": "17.0.0"
   },
   "eslintConfig": {
     "extends": "standard"

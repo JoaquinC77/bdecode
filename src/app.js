@@ -1,4 +1,4 @@
-import { intro, outro, select } from '@clack/prompts'
+import { intro, outro, select, text } from '@clack/prompts'
 import { decodeStringToBase64, encodeStringToBase64 } from './helpers/base64.js'
 
 const execActionByOption = (option, text = '') => {
@@ -23,7 +23,14 @@ const optionSelected = await select({
   options
 })
 
-execActionByOption(optionSelected)
+const textToEncodeDecode = await text({
+  message: `What is the text to ${optionSelected}:`,
+  validate(value){
+    if (value.length === 0) return `Value is required!`;
+  }
+})
 
-outro('you are welcome!')
+const base64Text = execActionByOption(optionSelected, textToEncodeDecode)
+
+outro(base64Text)
 process.exit(0)
