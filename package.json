@@ -2,7 +2,7 @@
   "name": "bdecode",
   "version": "1.0.0",
   "description": "\u0016command line to encode or decode a base64",
-  "main": "app.js",
+  "main": "./src/app.js",
   "type": "module",
   "bin": {
     "bdecode": "./src/bin.js"
