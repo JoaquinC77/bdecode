@@ -23,8 +23,7 @@
   "homepage": "https://github.com/JoaquinC77/bdecode#readme",
   "dependencies": {
     "@clack/prompts": "0.6.3",
-    "clipboardy": "3.0.0",
-    "bdecode": "file://dev/bdecode"
+    "clipboardy": "3.0.0"
   },
   "devDependencies": {
     "standard": "17.0.0"
